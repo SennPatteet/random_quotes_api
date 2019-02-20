@@ -9,7 +9,7 @@ const router = express.Router();
 const Quote = require('../models/quote')
 
 //get all quotes
-router.get('/read', (req, res, next) => {
+router.get('/', (req, res, next) => {
   Quote.find()
     .exec()
     .then(docs => {
@@ -25,7 +25,7 @@ router.get('/read', (req, res, next) => {
 });
 
 //post a quote
-router.post('/quotes/create', (req, res, next) => {
+router.post('/create', (req, res, next) => {
 
   const quote = new Quote({
     _id: new mongoose.Types.ObjectId(),
@@ -72,7 +72,7 @@ router.get('/:quoteId', (req, res, next) => {
 });
 
 //update SPECIFIC quote
-router.patch('/:quoteId', (req, res, next) => {
+router.patch('/patch/:quoteId', (req, res, next) => {
   const id = req.params.quoteId
   const updateOps = {};
   for (const ops of req.body) {
@@ -97,7 +97,7 @@ router.patch('/:quoteId', (req, res, next) => {
 });
 
 //delete SPECIFIC quote
-router.delete('/:quoteId', (req, res, next) => {
+router.delete('/delete/:quoteId', (req, res, next) => {
   const id = req.params.quoteId
   Quote.remove({
       _id: id
