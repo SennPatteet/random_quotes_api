@@ -1,4 +1,6 @@
-fetch("https://random-quotes-api-ex.herokuapp.com/quotes")
+fetch("https://random-quotes-api-ex.herokuapp.com/quotes", {
+  method: "GET"
+})
   .then(response => response.json())
   .then(json => getQuote(json))
 
