@@ -4,8 +4,8 @@ fetch("https://random-quotes-api-ex.herokuapp.com/quotes", {
   .then(response => response.json())
   .then(json => getQuote(json))
 
-const character = document.createElement('h4');
 const quote = document.createElement('h2');
+const character = document.createElement('h4');
 
 const container = document.querySelector('#container')
 
@@ -28,5 +28,29 @@ const container = document.querySelector('#container')
       };
 
     document.querySelector(".btn").addEventListener("mousedown", refresh);
+
+
+    const submit = () => {
+      const quoteInput = document.querySelector('.quoteInput').value
+      const characterInput = document.querySelector('.characterInput').value
+
+      const addQuote = {
+        method: "post",
+        mode: "cors",
+        headers: {"content-type": "application/json"}
+
+        body: JSON.stringify({
+          "quote": `${quoteInput}`,
+          "character": `${characterInput}`
+        })
+      }
+
+      console.log(quoteInput + "is added to the database" +
+      "\n" + characterInput + "is added to the database");
+    }
+
+    fetch('quotes/create', addQuote)
+
+    document.querySelector(".submit").addEventListener("mousedown", submit);
 
   };
