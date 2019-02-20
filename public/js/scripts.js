@@ -37,7 +37,7 @@ const container = document.querySelector('#container')
       const addQuote = {
         method: "post",
         mode: "cors",
-        headers: {"content-type": "application/json"}
+        headers: {"content-type": "application/json"},
 
         body: JSON.stringify({
           "quote": `${quoteInput}`,
