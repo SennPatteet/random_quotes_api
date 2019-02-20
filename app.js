@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 app.use(cors());
 
-app.set('view enginge', 'ejs');
+app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
@@ -43,7 +43,7 @@ app.use((req, res, next) => {
 //put '/quotes' in path by default
 app.use('/quotes', quoteRoutes);
 
-//error handling
+// error handling
 // app.use((req, res, next) => {
 //   const error = new Error('Not found');
 //   error.status = 404;

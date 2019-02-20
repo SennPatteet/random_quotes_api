@@ -2,7 +2,7 @@ fetch("https://random-quotes-api-ex.herokuapp.com/quotes", {
   method: "GET"
 })
   .then(response => response.json())
-  .then(json => getQuote(json))
+  .then(json => console.log(json))
 
 const character = document.createElement('h4');
 const quote = document.createElement('h2');
