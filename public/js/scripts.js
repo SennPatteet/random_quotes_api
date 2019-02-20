@@ -6,6 +6,7 @@ fetch("https://random-quotes-api-ex.herokuapp.com/quotes/read", {
 
 const character = document.createElement('h4');
 const quote = document.createElement('h2');
+
 const container = document.querySelector('#container')
 
 const getQuote = (quotes) => {
