@@ -37,6 +37,54 @@ img {
   padding-bottom: 0px;
 }
 
+.addQuote {
+  max-width: 100%;
+  margin: auto;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.quoteInput{
+  padding: 20px;
+  width: 400px;
+  background-color: #231f20;
+  border: solid 2px #5B4F37;
+  caret-color: #5B4F37;
+  color: #A78F55;
+}
+
+.characterInput {
+  padding: 20px;
+  width: 200px;
+  background-color: #231f20;
+  border: solid 2px #5B4F37;
+  caret-color: #5B4F37;
+  color: #A78F55;
+}
+
+.quoteInput:focus {
+  outline: none;
+}
+
+.characterInput:focus {
+  outline: none;
+}
+
+.submit {
+  padding: 10px;
+  width: 100px;
+  margin: 20px;
+  border: solid 2px #757575;
+  background-color: #231f20;
+  color: #757575;
+}
+
+.submit:hover {
+  background-color: #B49958;
+  border-color: #BAB7B7;
+  color: #FFFFFF;
+}
+
 .btn:active {
   background-color: white;
 }
