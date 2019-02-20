@@ -44,12 +44,9 @@ const container = document.querySelector('#container')
           "character": `${characterInput}`
         })
       }
-
-      console.log(quoteInput + "is added to the database" +
-      "\n" + characterInput + "is added to the database");
+      
+      fetch('quotes/create', addQuote)
     }
-
-    fetch('quotes/create', addQuote)
 
     document.querySelector(".submit").addEventListener("mousedown", submit);
 
