@@ -9,26 +9,24 @@ const quote = document.createElement('h2');
 
 const container = document.querySelector('#container')
 
-const getQuote = (quotes) => {
+  const getQuote = (quotes) => {
+    console.log(quotes);
 
-  console.log(quotes);
+      const refresh = () => {
+        //get random
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        console.log(randomQuote);
 
-  const refresh = () => {
+        //h2
+        container.appendChild(quote)
+        quote.textContent = `"${randomQuote.quote}"`
 
-    //get random
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    console.log(randomQuote);
 
-    //h2
-    container.appendChild(quote)
-    quote.textContent = `"${randomQuote.quote}"`
+        //h4
+        container.appendChild(character)
+        character.textContent = `- ${randomQuote.character}`
+      };
 
-    //h4
-    container.appendChild(character)
-    character.textContent = `- ${randomQuote.character}`
+    document.querySelector(".btn").addEventListener("mousedown", refresh);
 
   };
-
-  document.querySelector(".btn").addEventListener("mousedown", refresh);
-
-};
