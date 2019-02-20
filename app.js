@@ -44,7 +44,7 @@ app.use((req, res, next) => {
   next();
 });
 
-//put '/quotes' in path by default
+
 app.use('/quotes', quoteRoutes);
 
 // error handling

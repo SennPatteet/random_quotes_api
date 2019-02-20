@@ -8,12 +8,8 @@ const router = express.Router();
 //get model
 const Quote = require('../models/quote')
 
-router.get('/', (req, res) => {
-  res.render('index');
-})
-
 //get all quotes
-router.get('/', (req, res, next) => {
+router.get('/read', (req, res, next) => {
   Quote.find()
     .exec()
     .then(docs => {
@@ -29,7 +25,7 @@ router.get('/', (req, res, next) => {
 });
 
 //post a quote
-router.post('/', (req, res, next) => {
+router.post('/quotes/create', (req, res, next) => {
 
   const quote = new Quote({
     _id: new mongoose.Types.ObjectId(),

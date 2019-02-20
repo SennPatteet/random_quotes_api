@@ -1,8 +1,8 @@
-fetch("https://random-quotes-api-ex.herokuapp.com/quotes", {
+fetch("https://random-quotes-api-ex.herokuapp.com/quotes/read", {
   method: "GET"
 })
   .then(response => response.json())
-  .then(json => console.log(json))
+  .then(json => getQuote(json))
 
 const character = document.createElement('h4');
 const quote = document.createElement('h2');
@@ -28,6 +28,6 @@ const getQuote = (quotes) => {
 
   };
 
-  document.querySelector("a").addEventListener("mousedown", refresh);
+  document.querySelector(".btn").addEventListener("mousedown", refresh);
 
 };
