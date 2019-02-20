@@ -1,6 +1,13 @@
-fetch("http://localhost:3000/quotes")
-  .then(response => response.json())
-  .then(json => getQuote(json))
+// fetch("http://localhost:3000/quotes")
+//   .then(response => response.json())
+//   .then(json => getQuote(json))
+
+  fetch('https://becode-quotes-api-exercise.herokuapp.com/quotes', {
+            method: "GET"
+        })
+        .then(response => response.json())
+        .then(json => getQuote(json))
+        .catch(error => alert('Error:', error));
 
 const character = document.createElement('h4');
 const quote = document.createElement('h2');
