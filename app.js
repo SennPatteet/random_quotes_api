@@ -8,6 +8,10 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 app.use(cors());
 
+app.set('view enginge', 'ejs');
+
+app.use(express.static('public'));
+
 //routes
 const quoteRoutes = require('./api/routes/quotes');
 

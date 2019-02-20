@@ -8,7 +8,11 @@ const router = express.Router();
 //get model
 const Quote = require('../models/quote')
 
-//get all quotes (I think)
+router.get('/', (req, res) => {
+  res.render('index');
+})
+
+//get all quotes
 router.get('/', (req, res, next) => {
   Quote.find()
     .exec()
