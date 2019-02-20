@@ -1,1 +1,1 @@
-https://sennpatteet.github.io/random_quotes_api/
+https://random-quotes-api-ex.herokuapp.com/
