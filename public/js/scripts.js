@@ -74,6 +74,16 @@ const getQuote = (quotes) => {
   document.querySelector(".submit").addEventListener("mousedown", submit);
 
 
-console.log(quotes._id);
-// fetch(`https://random-quotes-api-ex.herokuapp.com/quotes/${quotes._id}`, {method: DELETE})
+  const deleteInput = document.querySelector('.deleteInput').value
+
+  const deleteData = (item, url) => {
+  return fetch(url + '/' + item, {
+    method: 'delete'
+  })
+  .then(response => response.json());
+}
+
+document.querySelector(".Delete").addEventListener("mousedown", deleteData(deleteInput, "https://random-quotes-api-ex.herokuapp.com/quotes/delete"));
+
+
 };

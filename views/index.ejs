@@ -26,16 +26,29 @@
     <img src="img/logo.png" alt="logo">
     <a class="btn" href="#">Get random quote</a>
   </div>
-  <a class="down" href="#form"><i class="fas fa-sort-down"></i>Add a quote to the database<i class="fas fa-sort-down"></i></a>
+  <a class="down" href="#addForm"><i class="fas fa-sort-down"></i>Add a quote to the database<i class="fas fa-sort-down"></i></a>
 
-  <div id="form">
+  <div id="addForm">
     <form class="form">
       <h1>Add a quote to the database</h1>
-      <textarea class="quoteInput" value="" rows="5" cols="80" placeholder="The quote you want to add"></textarea>
+      <textarea class="quoteInput" value="" rows="5" cols="80" placeholder="The quote you wish to add"></textarea>
       <input class="characterInput" type="text" value="" placeholder="The character who said the quote">
       <button class="submit">Submit</button>
     </form>
   </div>
+
+  <a class="down" href="#container"><i class="fas fa-sort-up"></i>Back to top<i class="fas fa-sort-up"></i></a>
+  <a class="down" href="#deleteForm"><i class="fas fa-sort-down"></i>Delete a quote from the database<i class="fas fa-sort-down"></i></a>
+
+  <div id="deleteForm">
+    <form class="form">
+      <h1 class="deleteH">Delete a quote from the database</h1>
+      <input class="deleteInput" type="text" value="" placeholder="The ID of the quote you wish to delete">
+      <button class="Delete">Delete</button>
+    </form>
+  </div>
+  <a class="downUp" href="#addForm"><i class="fas fa-sort-up"></i>Add a quote to the database<i class="fas fa-sort-up"></i></a>
+  <a class="downUp" href="#container"><i class="fas fa-sort-up"></i>Back to top<i class="fas fa-sort-up"></i></a>
 
   <!-- JAVASCRIPT --------------------------------------------------------->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
