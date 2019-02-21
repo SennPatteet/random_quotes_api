@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["VZ1CC"]); }
+
+__d("MessengerMessageSearchResultsQueryWebGraphQLQuery",["WebGraphQLQueryBase"],(function(a,b,c,d,e,f){"use strict";__p&&__p();e.exports=function(){__p&&__p();var a;a=babelHelpers.inherits(c,b("WebGraphQLQueryBase"));a&&a.prototype;c.__getDocID=function(){"use strict";return"2126809450747316"};c.getQueryID=function(){"use strict";return"2327137813963003"};function c(){"use strict";a.apply(this,arguments)}return c}()}),null);

@@ -2,13 +2,28 @@ body {
   background: #231f20;
   color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arials, sans;
+}
 
+html {
+  scroll-behavior: smooth;
 }
 
 #container {
   max-width: 60%;
   margin: auto;
   text-align: center;
+  height: 92vh;
+  border: solid 1px #231f20;
+}
+
+h1 {
+  margin-top: 10%;
+  text-align: center;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2em;
+  color: #A28B52;
+  font-family: 'Quicksand', sans-serif;
 }
 
 h2 {
@@ -17,7 +32,7 @@ h2 {
   text-align: center;
   color: #796843;
   font-family: 'Quicksand', sans-serif;
-
+  margin-top: 120px;
 }
 
 h4 {
@@ -32,34 +47,55 @@ img {
   width: 70%;
   display: block;
   margin: auto;
-  margin-top: 100px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin-top: 30px;
 }
 
-.addQuote {
+p {
+  text-align: center;
+  font-style: normal;
+  font-size: 1em;
+  color: #A28B52;
+  font-family: 'Quicksand', sans-serif;
+}
+
+i {
+  padding: 0px 10px 5px 10px;
+}
+
+
+/* ----------------------------------------------------------------FORM/INPUTS---------- */
+#form {
   max-width: 100%;
   margin: auto;
-  margin-top: 150px;
-  text-align: center;
+  height: 100vh;
+  border: solid 1px #231f20;
+  margin-top: 50px;
 }
 
 .quoteInput{
-  padding: 20px;
+  padding:50px 30px 50px;
   width: 400px;
   background-color: #231f20;
   border: solid 2px #5B4F37;
   caret-color: #5B4F37;
-  color: #A78F55;
+  color: #757575;
+  display: block;
+  margin: auto;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .characterInput {
-  padding: 20px;
-  width: 200px;
+  padding: 20px 30px 20px;
+  width: 400px;
   background-color: #231f20;
   border: solid 2px #5B4F37;
   caret-color: #5B4F37;
-  color: #A78F55;
+  color: #757575;
+  display: block;
+  margin: auto;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .quoteInput:focus {
@@ -70,31 +106,18 @@ img {
   outline: none;
 }
 
-.submit {
-  padding: 10px;
-  width: 100px;
-  margin: 20px;
-  border: solid 2px #757575;
-  background-color: #231f20;
-  color: #757575;
-}
 
-.submit:hover {
-  background-color: #B49958;
-  border-color: #BAB7B7;
-  color: #FFFFFF;
-}
-
-.btn:active {
+/* ----------------------------------------------------------------BUTTONS---------- */
+.btn:active, .submit:active, .down:active {
   background-color: white;
 }
 
-.btn:focus, .btn:active {
+.btn:focus, .btn:active, .submit:focus, .submit:active, .down:active, .down:focus {
   outline: none !important;
   box-shadow: none !important;
 }
 
-.btn {
+.btn, .submit, .down {
   display: inline-block;
   background: transparent;
   text-transform: uppercase;
@@ -104,27 +127,30 @@ img {
   letter-spacing: 0.3em;
   color: rgba(223,190,106,0.7);
   border-radius: 0;
-  padding: 18px 80px 20px;
+  padding: 25px 30px 25px;
   transition: all 0.7s ease-out;
   background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
   background-position: 1% 50%;
   background-size: 300% 300%;
   text-decoration: none;
-  max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  border: none;
   border: 1px solid rgba(223,190,106,0.3);
 }
 
-.btn:hover {
+.submit, .down {
+  display: block;
+  margin: auto;
+}
+
+.down {
+  padding: 10px 30px 10px;
+  text-align: center;
+  width: 30%;
+}
+
+.btn:hover, .submit:hover, .down:hover {
   color: #fff;
   border: 1px solid rgba(223,190,106,0);
   color: $white;
   background-position: 99% 50%;
-}
-
-
-article {
-  height: 100vh;
+  text-decoration: none;
 }

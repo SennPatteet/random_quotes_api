@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
 
   <!-- META --------------------------------------------------------->
@@ -12,26 +13,29 @@
   <!-- LINKS --------------------------------------------------------->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet"  type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
 </head>
 
 <body>
 
-<div id="container">
-  <img src="img/logo.png" alt="logo">
-  <a class="btn" href="#">Get random quote</a>
-</div>
+  <div id="container">
+    <img src="img/logo.png" alt="logo">
+    <a class="btn" href="#">Get random quote</a>
+  </div>
+  <a class="down" href="#form"><i class="fas fa-sort-down"></i>Add a quote to the database<i class="fas fa-sort-down"></i></a>
 
-<form class="addQuote" action="">
-  <input class="quoteInput" type="text" name="" value="" placeholder="Quote">
-  <input class="characterInput" type="text" name="" value="" placeholder="Character">
-  <button class="submit">Submit</button>
-</form>
-
+  <div id="form">
+    <form class="form">
+      <h1>Add a quote to the database</h1>
+      <textarea class="quoteInput" value="" rows="5" cols="80" placeholder="The quote you want to add"></textarea>
+      <input class="characterInput" type="text" value="" placeholder="The character who said the quote">
+      <button class="submit">Submit</button>
+    </form>
+  </div>
 
   <!-- JAVASCRIPT --------------------------------------------------------->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -41,4 +45,5 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
