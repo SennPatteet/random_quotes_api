@@ -16,7 +16,7 @@ html {
   max-width: 60%;
   margin: auto;
   text-align: center;
-  height: 92vh;
+  height: 83vh;
   border: solid 1px #231f20;
 }
 
@@ -55,7 +55,7 @@ img {
   width: 70%;
   display: block;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 p {
@@ -83,7 +83,7 @@ i {
 #deleteForm {
   max-width: 100%;
   margin: auto;
-  height: 80vh;
+  height: 82vh;
   border: solid 1px #231f20;
   margin-top: 45px;
 }
@@ -141,16 +141,16 @@ i {
 
 
 /* ----------------------------------------------------------------BUTTONS---------- */
-.btn:active, .submit:active, .down:active, .downUp:active, .Delete:active {
+.btn:active, .submit:active, .down:active, .downUp:active, .Delete:active, .downUpLast:active {
   background-color: white;
 }
 
-.btn:focus, .btn:active, .submit:focus, .submit:active, .down:active, .down:focus, .downUp:active, .downUp:focus, .Delete:focus, .Delete:active {
+.btn:focus, .btn:active, .submit:focus, .submit:active, .down:active, .down:focus, .downUp:active, .downUp:focus, .Delete:focus, .Delete:active, .downUpLast:focus, .downUpLast:active {
   outline: none !important;
   box-shadow: none !important;
 }
 
-.btn, .submit, .down, .downUp, .Delete {
+.btn, .submit, .down, .downUp, .Delete, .downUpLast {
   display: inline-block;
   background: transparent;
   text-transform: uppercase;
@@ -169,12 +169,12 @@ i {
   border: 1px solid rgba(223,190,106,0.3);
 }
 
-.submit, .down, .downUp, .Delete{
+.submit, .down, .downUp, .Delete, .downUpLast{
   display: block;
   margin: auto;
 }
 
-.down, .downUp {
+.down, .downUp, .downUpLast {
   padding: 10px 30px 10px;
   text-align: center;
   width: 33%;
@@ -185,7 +185,11 @@ i {
   margin-bottom: 10px;
 }
 
-.btn:hover, .submit:hover, .down:hover, .downUp:hover, .Delete:hover {
+.downUpLast {
+  margin-bottom: 50px;
+}
+
+.btn:hover, .submit:hover, .down:hover, .downUp:hover, .Delete:hover, .downUpLast:hover {
   color: #fff;
   border: 1px solid rgba(223,190,106,0);
   color: $white;

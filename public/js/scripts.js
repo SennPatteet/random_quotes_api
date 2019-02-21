@@ -1,4 +1,4 @@
-fetch("https://random-quotes-api-ex.herokuapp.com/quotes", {
+fetch("http://random-quotes-api-ex.herokuapp.com/quotes", {
     method: "GET"
   })
   .then(response => response.json())
@@ -14,7 +14,7 @@ const getQuote = (quotes) => {
   console.log(quotes);
 
 
-
+  /* ----------------------------------------------------------------RANDOM QUOTE REFRESH---------- */
 
   const refresh = () => {
     //get random
@@ -35,8 +35,7 @@ const getQuote = (quotes) => {
 
 
 
-
-
+  /* ----------------------------------------------------------------ADD QUOTE---------- */
 
   const submit = () => {
     const quoteInput = document.querySelector('.quoteInput').value
@@ -49,6 +48,7 @@ const getQuote = (quotes) => {
     } else if (quoteInput == "") {
       alert("Please enter a quote")
     } else {
+
       const addQuote = {
         method: "post",
         mode: "cors",
@@ -60,7 +60,7 @@ const getQuote = (quotes) => {
           "quote": `${quoteInput}`,
           "character": `${characterInput}`
         })
-      }
+      } //end of addQuote
 
       fetch('quotes/create', addQuote)
 
@@ -74,16 +74,22 @@ const getQuote = (quotes) => {
   document.querySelector(".submit").addEventListener("mousedown", submit);
 
 
-  const deleteInput = document.querySelector('.deleteInput').value
 
-  const deleteData = (item, url) => {
-  return fetch(url + '/' + item, {
-    method: 'delete'
-  })
-  .then(response => response.json());
-}
+  /* ----------------------------------------------------------------DELETE QUOTE---------- */
 
-document.querySelector(".Delete").addEventListener("mousedown", deleteData(deleteInput, "https://random-quotes-api-ex.herokuapp.com/quotes/delete"));
+  const deleteQuote = () => {
 
+    const deleteInput = document.querySelector(".deleteInput").value;
 
-};
+    return fetch(`http://random-quotes-api-ex.herokuapp.com/quotes/delete/${deleteInput}`, {
+        method: 'delete'
+      })
+
+      .then(response => response.json())
+      .then(location.reload())
+      .then(alert("The quote has been deleted"))
+  } //end of deleteData
+
+  document.querySelector(".Delete").addEventListener("mousedown", deleteQuote);
+
+}; //end of getQuote
