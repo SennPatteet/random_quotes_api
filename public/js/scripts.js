@@ -1,4 +1,4 @@
-fetch("http://random-quotes-api-ex.herokuapp.com/quotes", {
+fetch("https://random-quotes-api-ex.herokuapp.com/quotes", {
     method: "GET"
   })
   .then(response => response.json())
@@ -81,7 +81,7 @@ const getQuote = (quotes) => {
 
     const deleteInput = document.querySelector(".deleteInput").value;
 
-    return fetch(`http://random-quotes-api-ex.herokuapp.com/quotes/delete/${deleteInput}`, {
+    return fetch(`https://random-quotes-api-ex.herokuapp.com/quotes/delete/${deleteInput}`, {
         method: 'delete'
       })
 
