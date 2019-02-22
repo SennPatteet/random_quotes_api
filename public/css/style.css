@@ -187,6 +187,10 @@ i {
 
 .downUpLast {
   margin-bottom: 50px;
+  width: 5%;
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 0.8em;
 }
 
 .btn:hover, .submit:hover, .down:hover, .downUp:hover, .Delete:hover, .downUpLast:hover {

@@ -78,17 +78,33 @@ const getQuote = (quotes) => {
   /* ----------------------------------------------------------------DELETE QUOTE---------- */
 
   const deleteQuote = () => {
+      const deleteInput = document.querySelector(".deleteInput").value;
 
-    const deleteInput = document.querySelector(".deleteInput").value;
+      let everyId = [];
 
-    return fetch(`https://random-quotes-api-ex.herokuapp.com/quotes/delete/${deleteInput}`, {
-        method: 'delete'
+      quotes.forEach(quote => {
+        let anyId = quote._id;
+        everyId.push(anyId);
       })
 
-      .then(response => response.json())
-      .then(location.reload())
-      .then(alert("The quote has been deleted"))
-  } //end of deleteData
+      console.log(everyId);
+
+    if (deleteInput == "") {
+      alert("Please enter an ID")
+    } else if (deleteInput != "" && everyId.indexOf(deleteInput) == -1 ) {
+      alert("ID does not exist. \n Please enter a valid ID")
+    } else {
+
+      return fetch(`https://random-quotes-api-ex.herokuapp.com/quotes/delete/${deleteInput}`, {
+          method: 'delete'
+        })
+
+        .then(response => response.json())
+        .then(location.reload())
+        .then(alert(`The quote with ID '${deleteInput}' has been succesfully deleted from the database`))
+
+    } // endof else
+  } //end of deleteQuote
 
   document.querySelector(".Delete").addEventListener("mousedown", deleteQuote);
 
