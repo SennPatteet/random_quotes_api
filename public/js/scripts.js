@@ -66,7 +66,7 @@ const getQuote = (quotes) => {
 
       location.reload();
 
-      alert("The quote was succesfully added to the database");
+      alert("The quote has been succesfully added to the database");
 
     } //end of else
   } //end of submit
