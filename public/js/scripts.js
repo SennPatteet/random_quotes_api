@@ -92,7 +92,7 @@ const getQuote = (quotes) => {
     if (deleteInput == "") {
       alert("Please enter an ID")
     } else if (deleteInput != "" && everyId.indexOf(deleteInput) == -1 ) {
-      alert("ID does not exist. \n Please enter a valid ID")
+      alert("ID does not exist. \nPlease enter a valid ID")
     } else {
 
       return fetch(`https://random-quotes-api-ex.herokuapp.com/quotes/delete/${deleteInput}`, {
